@@ -104,7 +104,7 @@ class RTVSlo:
 
         # prepare X and y
         X = data.drop(columns=["n_comments", "concat_text", "concat_text_lemma"])
-        y = data["n_comments"]
+        y = data["n_comments"].apply(lambda x: np.sqrt(x))
 
         X_train, y_train = X, y
 
@@ -153,6 +153,7 @@ class RTVSlo:
         X_test = X
 
         y_predictions = self.model.predict(X_test)
+        y_predictions = np.square(y_predictions)
 
         return y_predictions
     
