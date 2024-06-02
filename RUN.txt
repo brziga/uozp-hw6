@@ -1,0 +1,12 @@
+Uporablja se Python 3.11.2. Načeloma bi moglo delovati tudi na drugih verzijah, ampak na tej je preizkušeno. 
+
+Nameščene morajo biti knjižnice:
+- numpy
+- scikit-learn
+- scipy
+- lemmagen3
+- nltk
+
+> pip install numpy scikit-learn scipy lemmagen3 nltk
+
+Podatki naj bodo v JSON obliki (in ne stisnjeni v arhivu). 
